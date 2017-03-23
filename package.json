@@ -1,0 +1,24 @@
+{
+  "name": "fruitkart",
+  "version": "1.0.0",
+  "description": "online fruit store",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/impradeeparya/fruitkart.git"
+  },
+  "author": "Pradeep Arya <impradeeparya@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/impradeeparya/fruitkart/issues"
+  },
+  "homepage": "https://github.com/impradeeparya/fruitkart#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.4",
+    "jshint": "^2.9.4"
+  }
+}
