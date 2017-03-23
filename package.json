@@ -17,8 +17,14 @@
   },
   "homepage": "https://github.com/impradeeparya/fruitkart#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-route": "^1.6.3",
+    "gulp-connect": "^5.0.0",
     "gulp-jshint": "^2.0.4",
+    "jquery": "^3.2.1",
     "jshint": "^2.9.4"
   }
 }
