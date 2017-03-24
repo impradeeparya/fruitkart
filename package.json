@@ -22,9 +22,14 @@
   "dependencies": {
     "angular": "^1.6.3",
     "angular-route": "^1.6.3",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.0.0",
     "gulp-jshint": "^2.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.1.2",
     "jquery": "^3.2.1",
-    "jshint": "^2.9.4"
+    "jshint": "^2.9.4",
+    "run-sequence": "^1.2.2"
   }
 }
