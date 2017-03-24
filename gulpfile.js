@@ -7,6 +7,7 @@ var runSequence = require('run-sequence');
 var concat = require('gulp-concat');  
 var rename = require('gulp-rename');  
 var uglify = require('gulp-uglify');
+var minifyCSS = require('gulp-minify-css');
 
 
 /*
@@ -28,7 +29,13 @@ var htmlFiles = [
   'src/***/**/*.html'
 ];
 
-var jsDestination = 'dist/assests/js';
+var cssFiles = [
+  'node_modules/bootstrap/dist/css/bootstrap-theme.min.css',
+  'node_modules/bootstrap/dist/css/bootstrap.min.css'
+];
+
+var jsDest = 'dist/assests/js';
+var cssDest = 'dist/assests/styles/css';
 
 
 
@@ -85,7 +92,17 @@ gulp.task('minify-js', function() {
         .pipe(concat('third-party.js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
-        .pipe(gulp.dest(jsDestination));
+        .pipe(gulp.dest(jsDest));
+});
+
+/*
+* minify all third party css
+*/
+gulp.task('minify-css', function() {
+  gulp.src(cssFiles)
+    .pipe(concat('third-party.css'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest(cssDest))
 });
 
 /*
@@ -127,10 +144,11 @@ gulp.task('deploy', function() {
 * build application -> clean and check for error in files
 */
 gulp.task('build', function() {
-  jsDestination = 'src/assests/js'
+  jsDest = 'src/assests/js'
+  cssDest = 'src/assests/styles/css'
   runSequence(
     ['clean'],
-    ['lint', 'minify-js'],
+    ['lint', 'minify-js', 'minify-css'],
     ['dev-deploy']
   );
 });

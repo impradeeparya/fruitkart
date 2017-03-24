@@ -1,3 +1,4 @@
 node_modules/
-src/assests/js/
+src/assests/js/third-party.min.js
+src/assests/styles/css/third-party.min.css
 dist

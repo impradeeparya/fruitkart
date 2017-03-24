@@ -1,1 +1,29 @@
-<h1>${title}</h1>
+<div class='jumbotron'>
+	  <img src="assests/styles/images/logo.png" style="display: inline-block;" height="120" width="120">
+	  <span style="display: inline-block;"><h1>{{title}}<h1></span>
+</div>
+
+<div>
+	<h2>Welcome to online fruits shop</h2>
+	<h3>Please select the product you want and add them to your shopping cart</h3>
+	<h3>When you are done, click the shopping cart icon to review your order and check out.</h3>
+</div>
+
+<div>
+	<table border='2'>
+		<tr>
+			<td style="text-align:right;" colspan='5'>3 items $100</td>
+		</tr>
+	    <tbody ng-repeat="item in items">
+	        <tr>
+	        	<td>image to display<td>
+	            <td>{{item.name}}<br>{{item.description}}</td>
+	            <td>{{item.rate}}</td>
+	            <td>add to cart</td>
+	        </tr>
+	    </tbody>
+	    <tr>
+	    	<td style="text-align:right;" colspan='5'>3 items $100</td>
+		</tr>
+	</table>
+</div>
