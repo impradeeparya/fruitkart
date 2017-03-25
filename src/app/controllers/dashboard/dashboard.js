@@ -4,6 +4,6 @@ angular
     	$routeProvider
     		.when('/', {
             				controller: 'DashBoardController',
-            				templateUrl: 'views/dashboard/dashboard.html'
+            				templateUrl: 'app/views/dashboard/dashboard.html'
         				});
 	}]);

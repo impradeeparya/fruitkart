@@ -14,8 +14,8 @@ var minifyCSS = require('gulp-minify-css');
 * files path
 */
 var jsModules = [
-  'src/modules/*.js',
-  'src/modules/**/**/*.js'
+  'src/app/*.js',
+  'src/app/**/**/*.js'
 ];
 
 var jsFiles = [
@@ -26,7 +26,7 @@ var jsFiles = [
 
 var htmlFiles = [
   'src/*.html',
-  'src/***/**/*.html'
+  'src/app/***/**/*.html'
 ];
 
 var cssFiles = [
@@ -52,7 +52,7 @@ gulp.task('lint', function() {
 * watch files for changes
 */
 gulp.task('watch', function() {
-    gulp.watch(modulesJS, ['lint']);
+    gulp.watch(jsModules, ['lint']);
 });
 
 /*
