@@ -4,6 +4,10 @@ angular
 				'DashBoardController',
 				function($scope, DashboardService) {
 
+					var cart = {};
+					$scope.totalCount = 0;
+					$scope.totalCost = 0;
+
 					DashboardService.fruits().then(function successCallback(response) {
 							$scope.fruits = response.data;
 					  	}, function errorCallback(response) {
@@ -20,5 +24,28 @@ angular
 					  	}, function errorCallback(response) {
 					  		console.log(response);
 					  	});
+
+					$scope.addToCart= function(fruit){
+						var value = cart[fruit.id];
+
+						if(value == undefined){
+							value = {};
+						}
+
+						value.item = fruit;
+						value.quantity = value.quantity == undefined ? 1 : value.quantity + 1;
+						cart[fruit.id] = value;
+
+						$scope.totalCount = Object.keys(cart).length;
+						$scope.totalCost = calculateTotalCost(cart);
+					}
+
+					function calculateTotalCost(cart){
+						var cost = 0;
+						for(id in cart){
+							cost = cost + (cart[id].quantity * cart[id].item.price);
+						}
+						return cost;
+					}
 					
 				});

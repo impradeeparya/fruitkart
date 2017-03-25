@@ -2,61 +2,71 @@
 	{
 		"name": "Apple",
 		"description" : "Eat one every day to keep doctor away",
-		"rate" : 120,
-		"image" : "assests/images/apple.png"
+		"price" : 120,
+		"image" : "assests/images/apple.png",
+		"id" : "app1"
 	},
 	{
 		"name": "Grapes",
 		"description" : "Wine is great but grapes are even better",
-		"rate" : 52,
-		"image" : "assests/images/grapes.png"
+		"price" : 52,
+		"image" : "assests/images/grapes.png",
+		"id" : "grp2"
 	},
 	{
 		"name": "Banana",
 		"description" : "Super popular for breakfast",
-		"rate" : 30,
-		"image" : "assests/images/banana.png"
+		"price" : 30,
+		"image" : "assests/images/banana.png",
+		"id" : "bn3"
 	},
 	{
 		"name": "Pineapple",
 		"description" : "Enjoy it but do not forget to peel first",
-		"rate" : 60,
-		"image" : "assests/images/pineapple.png"
+		"price" : 60,
+		"image" : "assests/images/pineapple.png",
+		"id" : "pine1"
 	},
 	{
 		"name": "Kiwi",
 		"description" : "Vitamin A, K, E and B",
-		"rate" : 110,
-		"image" : "assests/images/kiwi.png"
+		"price" : 110,
+		"image" : "assests/images/kiwi.png",
+		"id" : "kw2"
 	},
 	{
 		"name": "Mango",
 		"description" : "Tasty !!",
-		"rate" : 90,
-		"image" : "assests/images/mango.png"
+		"price" : 90,
+		"image" : "assests/images/mango.png",
+		"id" : "mng2"
 	},
 	{
 		"name": "Orange",
 		"description" : "Vitamin C",
-		"rate" : 50,
-		"image" : "assests/images/orange.png"
+		"price" : 50,
+		"image" : "assests/images/orange.png",
+		"id" : "orn3"
 	},
 	{
 		"name": "Strawberry",
 		"description" : "Enjoy !!",
-		"rate" : 60,
-		"image" : "assests/images/strawberry.png"
+		"price" : 60,
+		"image" : "assests/images/strawberry.png",
+		"id" : "str1"
 	},
 	{
 		"name": "Nimboo",
 		"description" : "+ mirchi(Nazar na lagge)",
-		"rate" : 6,
-		"image" : "assests/images/nimboo.png"
+		"price" : 6,
+		"image" : "assests/images/nimboo.png",
+		"id" : "nbo1"
 	},
 	{
 		"name": "Mirch",
 		"description" : "+ nimboo(Nazar na lagge)",
-		"rate" : 6,
-		"image" : "assests/images/mirch.png"
+		"price" : 6,
+		"image" : "assests/images/mirch.png",
+		"id" : "mrh1"
 	}
 ]

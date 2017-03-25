@@ -14,7 +14,10 @@
 <div>
 	<table border='2'>
 		<tr>
-			<td style="text-align:right;" colspan='5'>3 items $100</td>
+			<td style="text-align:right;" colspan='5'>
+				{{totalCount}} items 
+				${{totalCost}}
+			</td>
 		</tr>
 	    <tbody ng-repeat="fruit in fruits">
 	        <tr>
@@ -22,12 +25,15 @@
 	        		<img src="{{fruit.image}}" style="display: inline-block;" height="50" width="50">
 	        	<td>
 	            <td>{{fruit.name}}<br>{{fruit.description}}</td>
-	            <td>{{fruit.rate}}</td>
-	            <td>add to cart</td>
+	            <td>{{fruit.price}}</td>
+	            <td><button type="button" class="btn btn-success" ng-click="addToCart(fruit)">Add to cart</button></td>
 	        </tr>
 	    </tbody>
 	    <tr>
-	    	<td style="text-align:right;" colspan='5'>3 items $100</td>
+	    	<td style="text-align:right;" colspan='5'>
+				{{totalCount}} items 
+				${{totalCost}}
+			</td>
 		</tr>
 	</table>
 </div>
