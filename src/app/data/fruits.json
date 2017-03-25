@@ -2,21 +2,61 @@
 	{
 		"name": "Apple",
 		"description" : "Eat one every day to keep doctor away",
-		"rate" : 120
+		"rate" : 120,
+		"image" : "assests/images/apple.png"
 	},
 	{
 		"name": "Grapes",
 		"description" : "Wine is great but grapes are even better",
-		"rate" : 52
+		"rate" : 52,
+		"image" : "assests/images/grapes.png"
 	},
 	{
-		"name": "Papaya",
+		"name": "Banana",
 		"description" : "Super popular for breakfast",
-		"rate" : 30
+		"rate" : 30,
+		"image" : "assests/images/banana.png"
 	},
 	{
 		"name": "Pineapple",
 		"description" : "Enjoy it but do not forget to peel first",
-		"rate" : 60
+		"rate" : 60,
+		"image" : "assests/images/pineapple.png"
+	},
+	{
+		"name": "Kiwi",
+		"description" : "Vitamin A, K, E and B",
+		"rate" : 110,
+		"image" : "assests/images/kiwi.png"
+	},
+	{
+		"name": "Mango",
+		"description" : "Tasty !!",
+		"rate" : 90,
+		"image" : "assests/images/mango.png"
+	},
+	{
+		"name": "Orange",
+		"description" : "Vitamin C",
+		"rate" : 50,
+		"image" : "assests/images/orange.png"
+	},
+	{
+		"name": "Strawberry",
+		"description" : "Enjoy !!",
+		"rate" : 60,
+		"image" : "assests/images/strawberry.png"
+	},
+	{
+		"name": "Nimboo",
+		"description" : "+ mirchi(Nazar na lagge)",
+		"rate" : 6,
+		"image" : "assests/images/nimboo.png"
+	},
+	{
+		"name": "Mirch",
+		"description" : "+ nimboo(Nazar na lagge)",
+		"rate" : 6,
+		"image" : "assests/images/mirch.png"
 	}
 ]

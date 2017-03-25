@@ -3,12 +3,22 @@ angular
 	.controller(
 				'DashBoardController',
 				function($scope, DashboardService) {
-					$scope.title = "Fruit Store";
 
 					DashboardService.fruits().then(function successCallback(response) {
-						$scope.fruits = response.data;
-					  }, function errorCallback(response) {
-					  	console.log(reponse);
-					  });
+							$scope.fruits = response.data;
+					  	}, function errorCallback(response) {
+					  		console.log(reponse);
+					  	});
+
+					DashboardService.staticData().then(function successCallback(response) {
+							
+							var data = response.data;
+							$scope.title = data['title'];
+							$scope.welcomeMessage = data['welcome.message'];
+							$scope.welcomeNote = data['welcome.note'];
+
+					  	}, function errorCallback(response) {
+					  		console.log(response);
+					  	});
 					
 				});
