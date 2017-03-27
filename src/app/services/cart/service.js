@@ -1,6 +1,6 @@
 angular
 	.module('fk.cart.service', [])
-	.factory('CartFactory', function($http){
+	.factory('CartFactory', [ function($http){
 
 		var items = {};
 
@@ -32,4 +32,4 @@ angular
 					return cost;
 				}
 		};
-	});
+	}]);
