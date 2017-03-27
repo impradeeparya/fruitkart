@@ -1,10 +1,9 @@
 angular
-	.module('fk.dashboard.controller', ['fk.dashboard.service'])
+	.module('fk.dashboard.controller', ['fk.dashboard.service', 'fk.cart.service'])
 	.controller(
 				'DashBoardController',
-				function($scope, DashboardService) {
+				function($scope, DashboardService, CartFactory) {
 
-					var cart = {};
 					$scope.totalCount = 0;
 					$scope.totalCost = 0;
 
@@ -17,7 +16,7 @@ angular
 					DashboardService.staticData().then(function successCallback(response) {
 							
 							var data = response.data;
-							$scope.title = data['title'];
+							$scope.title = data.title;
 							$scope.welcomeMessage = data['welcome.message'];
 							$scope.welcomeNote = data['welcome.note'];
 
@@ -26,26 +25,11 @@ angular
 					  	});
 
 					$scope.addToCart= function(fruit){
-						var value = cart[fruit.id];
+						
+						CartFactory.addToCart(fruit);
 
-						if(value == undefined){
-							value = {};
-						}
-
-						value.item = fruit;
-						value.quantity = value.quantity == undefined ? 1 : value.quantity + 1;
-						cart[fruit.id] = value;
-
-						$scope.totalCount = Object.keys(cart).length;
-						$scope.totalCost = calculateTotalCost(cart);
-					}
-
-					function calculateTotalCost(cart){
-						var cost = 0;
-						for(id in cart){
-							cost = cost + (cart[id].quantity * cart[id].item.price);
-						}
-						return cost;
-					}
+						$scope.totalCount = CartFactory.count();
+						$scope.totalCost = CartFactory.cost();
+					};
 					
 				});

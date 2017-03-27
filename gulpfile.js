@@ -135,7 +135,7 @@ gulp.task('default', ['lint', 'watch']);
 gulp.task('deploy', function() {
   runSequence(
     ['clean'],
-    ['lint', 'minify-js', 'copy-html-files', 'copy-modules-files'],
+    ['lint', 'watch', 'minify-js', 'copy-html-files', 'copy-modules-files'],
     ['connect']
   );
 });
@@ -148,7 +148,7 @@ gulp.task('build', function() {
   cssDest = 'src/assests/styles/css'
   runSequence(
     ['clean'],
-    ['lint', 'minify-js', 'minify-css'],
+    ['lint', 'watch', 'minify-js', 'minify-css'],
     ['dev-deploy']
   );
 });

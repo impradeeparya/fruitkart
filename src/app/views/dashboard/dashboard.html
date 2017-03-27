@@ -13,16 +13,18 @@
 </div>
 <div>
 	<table border='2'>
-		<tr>
-			<td style="text-align:right;" colspan='5'>
-				{{totalCount}} items 
-				${{totalCost}}
-			</td>
-		</tr>
+		<thead>
+			<tr>
+				<td style="text-align:right;" colspan='5'>
+					{{totalCount}} items 
+					${{totalCost}}
+				</td>
+			</tr>
+		</thead>
 	    <tbody ng-repeat="fruit in fruits">
 	        <tr>
 	        	<td>
-	        		<img src="{{fruit.image}}" style="display: inline-block;" height="50" width="50">
+	        		<img src="{{fruit.image}}" style="display: inline-block;" height="50" width="50" />
 	        	<td>
 	            <td>{{fruit.name}}<br>{{fruit.description}}</td>
 	            <td>{{fruit.price}}</td>
