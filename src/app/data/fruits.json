@@ -4,69 +4,389 @@
 		"description" : "Eat one every day to keep doctor away",
 		"price" : 120,
 		"image" : "assests/images/apple.png",
-		"id" : "app1"
+		"id" : "app1",
+		"features" : [
+			{
+				"name" : "Calories",
+				"amount"  : 90,
+				"description" : ""
+			},
+			{
+				"name" : "Carotenoid",
+				"value"  : 1,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Fiber",
+				"value"  : 3,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			},
+			{
+				"name" : "Foliated",
+				"value"  : 2,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Potassium",
+				"value"  : 1,
+				"description" : "Low, between 5 and 10% of the recommended daliy value"
+			},
+			{
+				"name" : "Vitamin C",
+				"value"  : 4,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			}
+		]
 	},
 	{
 		"name": "Grapes",
 		"description" : "Wine is great but grapes are even better",
 		"price" : 52,
 		"image" : "assests/images/grapes.png",
-		"id" : "grp2"
+		"id" : "grp2",
+		"features" : [
+			{
+				"name" : "Calories",
+				"amount"  : 90,
+				"description" : ""
+			},
+			{
+				"name" : "Carotenoid",
+				"value"  : 2,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Fiber",
+				"value"  : 1,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			},
+			{
+				"name" : "Foliated",
+				"value"  : 0,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Potassium",
+				"value"  : 3,
+				"description" : "Low, between 5 and 10% of the recommended daliy value"
+			},
+			{
+				"name" : "Vitamin C",
+				"value"  : 2,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			}
+		]
 	},
 	{
 		"name": "Banana",
 		"description" : "Super popular for breakfast",
 		"price" : 30,
 		"image" : "assests/images/banana.png",
-		"id" : "bn3"
+		"id" : "bn3",
+		"features" : [
+			{
+				"name" : "Calories",
+				"amount"  : 90,
+				"description" : ""
+			},
+			{
+				"name" : "Carotenoid",
+				"value"  : 0,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Fiber",
+				"value"  : 2,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			},
+			{
+				"name" : "Foliated",
+				"value"  : 2,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Potassium",
+				"value"  : 4,
+				"description" : "Low, between 5 and 10% of the recommended daliy value"
+			},
+			{
+				"name" : "Vitamin C",
+				"value"  : 3,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			}
+		]
 	},
 	{
 		"name": "Pineapple",
 		"description" : "Enjoy it but do not forget to peel first",
 		"price" : 60,
 		"image" : "assests/images/pineapple.png",
-		"id" : "pine1"
+		"id" : "pine1",
+		"features" : [
+			{
+				"name" : "Calories",
+				"amount"  : 90,
+				"description" : ""
+			},
+			{
+				"name" : "Carotenoid",
+				"value"  : 0,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Fiber",
+				"value"  : 1,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			},
+			{
+				"name" : "Foliated",
+				"value"  : 1,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Potassium",
+				"value"  : 2,
+				"description" : "Low, between 5 and 10% of the recommended daliy value"
+			},
+			{
+				"name" : "Vitamin C",
+				"value"  : 2,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			}
+		]
 	},
 	{
 		"name": "Kiwi",
 		"description" : "Vitamin A, K, E and B",
 		"price" : 110,
 		"image" : "assests/images/kiwi.png",
-		"id" : "kw2"
+		"id" : "kw2",
+		"features" : [
+			{
+				"name" : "Calories",
+				"amount"  : 90,
+				"description" : ""
+			},
+			{
+				"name" : "Carotenoid",
+				"value"  : 0,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Fiber",
+				"value"  : 2,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			},
+			{
+				"name" : "Foliated",
+				"value"  : 1,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Potassium",
+				"value"  : 4,
+				"description" : "Low, between 5 and 10% of the recommended daliy value"
+			},
+			{
+				"name" : "Vitamin C",
+				"value"  : 2,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			}
+		]
 	},
 	{
 		"name": "Mango",
 		"description" : "Tasty !!",
 		"price" : 90,
 		"image" : "assests/images/mango.png",
-		"id" : "mng2"
+		"id" : "mng2",
+		"features" : [
+			{
+				"name" : "Calories",
+				"amount"  : 50,
+				"description" : ""
+			},
+			{
+				"name" : "Carotenoid",
+				"value"  : 3,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Fiber",
+				"value"  : 1,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			},
+			{
+				"name" : "Foliated",
+				"value"  : 4,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Potassium",
+				"value"  : 1,
+				"description" : "Low, between 5 and 10% of the recommended daliy value"
+			},
+			{
+				"name" : "Vitamin C",
+				"value"  : 2,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			}
+		]
 	},
 	{
 		"name": "Orange",
 		"description" : "Vitamin C",
 		"price" : 50,
 		"image" : "assests/images/orange.png",
-		"id" : "orn3"
+		"id" : "orn3",
+		"features" : [
+			{
+				"name" : "Calories",
+				"amount"  : 20,
+				"description" : ""
+			},
+			{
+				"name" : "Carotenoid",
+				"value"  : 1,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Fiber",
+				"value"  : 2,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			},
+			{
+				"name" : "Foliated",
+				"value"  : 2,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Potassium",
+				"value"  : 3,
+				"description" : "Low, between 5 and 10% of the recommended daliy value"
+			},
+			{
+				"name" : "Vitamin C",
+				"value"  : 2,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			}
+		]
 	},
 	{
 		"name": "Strawberry",
 		"description" : "Enjoy !!",
 		"price" : 60,
 		"image" : "assests/images/strawberry.png",
-		"id" : "str1"
+		"id" : "str1",
+		"features" : [
+			{
+				"name" : "Calories",
+				"amount"  : 40,
+				"description" : ""
+			},
+			{
+				"name" : "Carotenoid",
+				"value"  : 0,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Fiber",
+				"value"  : 2,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			},
+			{
+				"name" : "Foliated",
+				"value"  : 0,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Potassium",
+				"value"  : 1,
+				"description" : "Low, between 5 and 10% of the recommended daliy value"
+			},
+			{
+				"name" : "Vitamin C",
+				"value"  : 2,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			}
+		]
 	},
 	{
 		"name": "Nimboo",
 		"description" : "+ mirchi(Nazar na lagge)",
 		"price" : 6,
 		"image" : "assests/images/nimboo.png",
-		"id" : "nbo1"
+		"id" : "nbo1",
+		"features" : [
+			{
+				"name" : "Calories",
+				"amount"  : 90,
+				"description" : ""
+			},
+			{
+				"name" : "Carotenoid",
+				"value"  : 0,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Fiber",
+				"value"  : 2,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			},
+			{
+				"name" : "Foliated",
+				"value"  : 0,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Potassium",
+				"value"  : 1,
+				"description" : "Low, between 5 and 10% of the recommended daliy value"
+			},
+			{
+				"name" : "Vitamin C",
+				"value"  : 2,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			}
+		]
 	},
 	{
 		"name": "Mirch",
 		"description" : "+ nimboo(Nazar na lagge)",
 		"price" : 6,
 		"image" : "assests/images/mirch.png",
-		"id" : "mrh1"
+		"id" : "mrh1",
+		"features" : [
+			{
+				"name" : "Calories",
+				"amount"  : 50,
+				"description" : ""
+			},
+			{
+				"name" : "Carotenoid",
+				"value"  : 0,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Fiber",
+				"value"  : 2,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			},
+			{
+				"name" : "Foliated",
+				"value"  : 0,
+				"description" : "Negligible, below 5% of the recommended daliy value"
+			},
+			{
+				"name" : "Potassium",
+				"value"  : 1,
+				"description" : "Low, between 5 and 10% of the recommended daliy value"
+			},
+			{
+				"name" : "Vitamin C",
+				"value"  : 2,
+				"description" : "Average, between 10 and 20% of the recommended daliy value"
+			}
+		]
 	}
 ]

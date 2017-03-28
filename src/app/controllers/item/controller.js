@@ -1,8 +1,10 @@
 angular
-	.module('fk.item.controller', ['fk.item.service', 'fk.cart.service', 'fk.util.service'])
+	.module('fk.item.controller', ['fk.item.service', 'fk.cart.service', 'fk.util.service', 'fk.util.directive'])
 	.controller(
 				'ProductController',
 				function($scope, $routeParams, CartFactory, ItemService, CommonService) {
+
+					$scope.rating = 2;
 
 					ItemService.fruit($routeParams.id).then(function successCallback(response) {
 

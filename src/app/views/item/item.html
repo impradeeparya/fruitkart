@@ -8,8 +8,35 @@
 	<h4>{{welcomeNote}}</h4>
 </div>
 <div>
-	<img src="{{fruit.image}}" style="display: inline-block;" height="50" width="50" />{{fruit.name}}
+	<img src="{{fruit.image}}" style="display: inline-block;" height="50" width="50" />{{fruit.name}}. {{fruit.description}}
 </div>
-<div class="jumbotron">
-	{{totalItem}} items ${{totalCost}}
-</div>
+
+<table border='2'>
+	<thead>
+		<tr>
+			<td style="text-align:right;" colspan='3'>
+				{{totalCount}} items 
+				${{totalCost}}
+			</td>
+		</tr>
+	</thead>
+    <tbody ng-repeat="feature in fruit.features">
+        <tr>
+        	<td>
+        		{{feature.name}}
+        	</td>
+        	<td>
+        		<star-rating ng-model="feature.value" readonly="true"></star-rating>
+            </td>
+            <td>
+            	{{feature.description}}
+            </td>
+        </tr>
+    </tbody>
+    <tr>
+    	<td style="text-align:right;" colspan='3'>
+			{{totalCount}} items 
+			${{totalCost}}
+		</td>
+	</tr>
+</table>

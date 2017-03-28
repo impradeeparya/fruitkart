@@ -31,11 +31,17 @@ var htmlFiles = [
 
 var cssFiles = [
   'node_modules/bootstrap/dist/css/bootstrap-theme.min.css',
-  'node_modules/bootstrap/dist/css/bootstrap.min.css'
+  'node_modules/bootstrap/dist/css/bootstrap.min.css',
+  'node_modules/font-awesome/css/font-awesome.min.css'
 ];
 
 var jsDest = 'dist/assests/js';
 var cssDest = 'dist/assests/styles/css';
+var fontDest = 'dist/assests/styles/fonts'
+
+var fontFiles = [
+  'node_modules/font-awesome/fonts/*.*'
+];
 
 
 
@@ -122,6 +128,14 @@ gulp.task('copy-modules-files', function () {
     .pipe(gulp.dest('dist/modules'));
 });
 
+/*
+* copy modules file
+*/
+gulp.task('copy-font-files', function () {
+  gulp.src(fontFiles)
+    .pipe(gulp.dest(fontDest));
+});
+
 
 
 /*
@@ -146,9 +160,10 @@ gulp.task('deploy', function() {
 gulp.task('build', function() {
   jsDest = 'src/assests/js'
   cssDest = 'src/assests/styles/css'
+  fontDest = 'src/assests/styles/fonts'
   runSequence(
     ['clean'],
-    ['lint', 'watch', 'minify-js', 'minify-css'],
+    ['lint', 'watch', 'minify-js', 'minify-css', 'copy-font-files'],
     ['dev-deploy']
   );
 });

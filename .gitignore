@@ -1,4 +1,5 @@
 node_modules/
 src/assests/js/third-party.min.js
 src/assests/styles/css/third-party.min.css
+src/assests/styles/fonts
 dist

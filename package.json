@@ -23,6 +23,7 @@
     "angular": "^1.6.3",
     "angular-route": "^1.6.3",
     "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
     "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.0.0",
