@@ -1,6 +1,8 @@
 <div class='jumbotron'>
+	<a href="#!/">
 	  <img src="assests/styles/images/logo.png" style="display: inline-block;" height="120" width="120">
 	  <span style="display: inline-block;"><h1>{{title}}<h1></span>
+	</a>
 </div>
 
 <div>
@@ -26,7 +28,13 @@
         		{{feature.name}}
         	</td>
         	<td>
-        		<star-rating ng-model="feature.value" readonly="true"></star-rating>
+        		<div ng-if='feature.amount != undefined'>
+				    {{feature.amount}}
+				</div>
+				<div ng-if='feature.value != undefined'>
+				    <circle-rating ng-model="feature.value"></circle-rating>
+				</div>
+        		
             </td>
             <td>
             	{{feature.description}}
