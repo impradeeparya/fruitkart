@@ -1,2 +1,2 @@
 angular
-	.module('fk', [ 'ngRoute', 'fk.dashboard', 'fk.product', 'fk.cart']);
+	.module('fk', [ 'ngRoute', 'fk.dashboard', 'fk.item', 'fk.cart']);

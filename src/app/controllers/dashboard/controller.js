@@ -1,10 +1,10 @@
 angular
-	.module('fk.dashboard.controller', ['fk.util.service', 'fk.util.service', 'fk.cart.factory'])
+	.module('fk.dashboard.controller', ['fk.util.service', 'fk.util.service', 'fk.cart.factory', 'fk.util.directive'])
 	.controller(
 				'DashBoardController',
-				function($scope, ProductService, CommonService, CartFactory) {
+				function($scope, ItemService, CommonService, CartFactory) {
 
-					ProductService.fruits().then(function successCallback(response) {
+					ItemService.fruits().then(function successCallback(response) {
 							$scope.fruits = response.data;
 							updateCartInfo();
 					  	}, function errorCallback(response) {
@@ -22,7 +22,7 @@ angular
 					  		console.log(response);
 					  	});
 
-					$scope.addToCart= function(fruit){
+					$scope.addToCart = function(fruit){
 						
 						CartFactory.addToCart(fruit);
 						updateCartInfo();
@@ -32,5 +32,21 @@ angular
 						$scope.totalCount = CartFactory.count();
 						$scope.totalCost = CartFactory.cost();
 					}
+
+					$scope.searchItems = function(value){
+						ItemService.fruits().then(function successCallback(response) {
+							$scope.fruits = [];
+							var fruits = response.data;
+							for(var index in fruits){
+								var pattern = new RegExp(value, "i");
+								if(pattern.test(fruits[index].name)){
+									$scope.fruits.push(fruits[index]);
+								}
+							}
+							updateCartInfo();
+					  	}, function errorCallback(response) {
+					  		console.log(reponse);
+					  	});
+					};
 					
 				});

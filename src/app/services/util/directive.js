@@ -27,4 +27,12 @@ angular
 			}
 	      }
 	    };
+	})
+	.directive('search', function () {
+		return function ($scope, element) {
+			element.bind("keyup", function (event) {
+				var val = element.val();
+				$scope.searchItems(val);
+			});
+	    };
 	});

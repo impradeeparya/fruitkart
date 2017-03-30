@@ -47,7 +47,7 @@ angular
 					$scope.updateQuantity = function(item, quantity){
 						quantity = item.quantity + quantity;
 
-						if(quantity == 0){
+						if(quantity === 0){
 							$scope.cart = CartFactory.removeFromCart(item.item.id);
 						}else{
 							item.quantity = quantity;
@@ -55,5 +55,5 @@ angular
 						}
 						
 						updateCartInfo();
-					}
+					};
 				});

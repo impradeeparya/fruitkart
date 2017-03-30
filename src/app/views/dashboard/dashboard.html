@@ -11,7 +11,7 @@
 </div>
 <div>
 	<label for="fruitName">Search</label>
-	<input type="text" ng-model="fruitName" id="fruitName"/>
+	<input type="text" ng-model="fruitName" id="fruitName" search/>
 </div>
 <div>
 	<table border='2'>
@@ -28,7 +28,7 @@
 	        	<td>
 	        		<img src="{{fruit.image}}" style="display: inline-block;" height="50" width="50" />
 	        	<td>
-	            <td><a ng-href="#!/product/{{fruit.id}}">{{fruit.name}}</a><br>{{fruit.description}}</td>
+	            <td><a ng-href="#!/item/{{fruit.id}}">{{fruit.name}}</a><br>{{fruit.description}}</td>
 	            <td>{{fruit.price}}</td>
 	            <td><button type="button" class="btn btn-link" ng-click="addToCart(fruit)">Add to cart</button></td>
 	        </tr>

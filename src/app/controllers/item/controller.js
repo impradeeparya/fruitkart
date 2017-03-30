@@ -1,10 +1,10 @@
 angular
-	.module('fk.product.controller', ['fk.product.service', 'fk.cart.factory', 'fk.util.service', 'fk.util.directive'])
+	.module('fk.item.controller', ['fk.item.service', 'fk.cart.factory', 'fk.util.service', 'fk.util.directive'])
 	.controller(
-				'ProductController',
-				function($scope, $routeParams, CartFactory, ProductService, CommonService) {
+				'ItemController',
+				function($scope, $routeParams, CartFactory, ItemService, CommonService) {
 
-					ProductService.fruit($routeParams.id).then(function successCallback(response) {
+					ItemService.fruit($routeParams.id).then(function successCallback(response) {
 
 							for(var index in response.data){
 								if(response.data[index].id === $routeParams.id){
