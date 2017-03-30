@@ -1,6 +1,9 @@
 {
 	"title" : "Fruitkart",
 	"welcome.message" : "Welcome to online fruits shop",
-	"welcome.note" : "Please select the product you want and add them to your shopping cart. When you are done, click the shopping cart icon to review your order and check out."
+	"welcome.note" : "Please select the product you want and add them to your shopping cart. When you are done, click the shopping cart icon to review your order and check out.",
+	"thanks.message" : "Thanks for shopping at fruitkart.",
+	"cart.message" : "This is your shopping cart, Here you can edit the items, go back to store, clear cart or check out."
+
 
 }

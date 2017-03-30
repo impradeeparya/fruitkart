@@ -23,6 +23,15 @@ angular
 				},
 				removeFromCart : function(itemId){
 					delete items[itemId];
+					return items;
+				},
+				clearCart : function(){
+					items = {};
+					return items;
+				},
+				update : function(itemId, item){
+					items[itemId] = item;
+					return items;
 				},
 				count : function(){
 					return Object.keys(items).length;

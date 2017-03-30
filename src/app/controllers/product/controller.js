@@ -21,8 +21,6 @@ angular
 							
 							var data = response.data;
 							$scope.title = data.title;
-							$scope.welcomeMessage = data['welcome.message'];
-							$scope.welcomeNote = data['welcome.note'];
 
 					  	}, function errorCallback(response) {
 					  		console.log(response);

@@ -6,49 +6,58 @@
 </div>
 
 <div>
-	<h2>{{welcomeMessage}}</h2>
-	<h4>{{welcomeNote}}</h4>
-</div>
-<div>
-	<img src="{{fruit.image}}" style="display: inline-block;" height="50" width="50" />{{fruit.name}}. {{fruit.description}}
+	<h3>{{thanksMessage}}<h3>
+	<h4>{{cartMessage}}</h4>
 </div>
 
 <table border='2'>
 	<thead>
 		<tr>
-			<td style="text-align:right;" colspan='3'>
-				{{totalCount}} items 
-				${{totalCost}}
-			</td>
+			<td>Item</td>
+			<td>Quantity</td>
+			<td>Price</td>
+			<td></td>
 		</tr>
 	</thead>
-    <tbody ng-repeat="feature in fruit.features">
+    <tbody ng-repeat="item in cart">
         <tr>
         	<td>
-        		{{feature.name}}
+        		{{item.item.name}}
         	</td>
         	<td>
-        		<div ng-if='feature.amount != undefined'>
-				    {{feature.amount}}
-				</div>
-				<div ng-if='feature.value != undefined'>
-				    <circle-rating ng-model="feature.value"></circle-rating>
-				</div>
-        		
+        		<div class="input-group">
+        			{{item.quantity}}
+
+				    <div class="btn-group" data-toggle="buttons-radio">
+						<button name="spin" type="button" class="btn btn-success active" ng-click="updateQuantity(item, 1)"><i class="fa fa-plus"></i></button>
+						<button name="spin" type="button" class="btn" ng-click="updateQuantity(item, -1)"><i class="fa fa-minus"></i></button>
+					</div>
+				  </div>
             </td>
             <td>
-            	{{feature.description}}
+            	${{item.item.price*item.quantity}}
+            </td>
+            <td>
+            	<span ng-click="removeFromCart(item.item)"><i class="fa fa-times" aria-hidden="true"></i></span>
             </td>
         </tr>
-    </tbody>
+    </tbody> 	
     <tr>
-    	<td style="text-align:right;" colspan='3'>
-			{{totalCount}} items 
-			${{totalCost}}
-		</td>
-	</tr>
+    	<td>
+    		Total
+    	</td>
+    	<td>
+    		{{totalCount}}
+        </td>
+        <td>
+        	${{totalCost}}
+        </td>
+        <td>
+        </td>
+    </tr>
 </table>
 
-<button type="button" class="btn btn-success" ng-click="addToCart()">Add to cart</button>
-<button type="button" class="btn btn-danger" ng-click="removeFromCart()">Remove from cart</button>
 <button type="button" class="btn btn-default" ng-click="redirectToStore()">Back to store</button>
+<button type="button" class="btn btn-danger" ng-click="clearCart()">Clear cart</button>
+<button type="button" class="btn btn-primary">Checkout using paypal</button>
+<button type="button" class="btn btn-primary">Checkout using google</button>
