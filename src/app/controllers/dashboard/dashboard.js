@@ -1,5 +1,5 @@
 angular
-	.module('fk.dashboard', ['fk.dashboard.controller', 'fk.util.service', 'fk.cart.service'])
+	.module('fk.dashboard', ['fk.dashboard.controller', 'fk.util.service', 'fk.cart.factory'])
 	.config(['$routeProvider', function ($routeProvider) {
     	$routeProvider
     		.when('/', {

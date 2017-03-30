@@ -1,14 +1,12 @@
 angular
-	.module('fk.dashboard.controller', ['fk.util.service', 'fk.util.service', 'fk.cart.service'])
+	.module('fk.dashboard.controller', ['fk.util.service', 'fk.util.service', 'fk.cart.factory'])
 	.controller(
 				'DashBoardController',
-				function($scope, ItemService, CommonService, CartFactory) {
+				function($scope, ProductService, CommonService, CartFactory) {
 
-					$scope.totalCount = 0;
-					$scope.totalCost = 0;
-
-					ItemService.fruits().then(function successCallback(response) {
+					ProductService.fruits().then(function successCallback(response) {
 							$scope.fruits = response.data;
+							updateCartInfo();
 					  	}, function errorCallback(response) {
 					  		console.log(reponse);
 					  	});
@@ -27,9 +25,12 @@ angular
 					$scope.addToCart= function(fruit){
 						
 						CartFactory.addToCart(fruit);
+						updateCartInfo();
+					};
 
+					function updateCartInfo(){
 						$scope.totalCount = CartFactory.count();
 						$scope.totalCost = CartFactory.cost();
-					};
+					}
 					
 				});

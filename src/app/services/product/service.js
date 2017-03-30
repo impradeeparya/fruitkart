@@ -1,6 +1,6 @@
 angular
-	.module('fk.item.service', [])
-	.service('ItemService', function($http){
+	.module('fk.product.service', [])
+	.service('ProductService', function($http){
 
 		this.fruits = function() {
 			return $http.get("app/data/fruits.json");

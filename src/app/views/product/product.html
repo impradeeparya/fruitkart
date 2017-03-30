@@ -1,0 +1,54 @@
+<div class='jumbotron'>
+	<a href="#!/">
+	  <img src="assests/styles/images/logo.png" style="display: inline-block;" height="120" width="120">
+	  <span style="display: inline-block;"><h1>{{title}}<h1></span>
+	</a>
+</div>
+
+<div>
+	<h2>{{welcomeMessage}}</h2>
+	<h4>{{welcomeNote}}</h4>
+</div>
+<div>
+	<img src="{{fruit.image}}" style="display: inline-block;" height="50" width="50" />{{fruit.name}}. {{fruit.description}}
+</div>
+
+<table border='2'>
+	<thead>
+		<tr>
+			<td style="text-align:right;" colspan='3'>
+				{{totalCount}} items 
+				${{totalCost}}
+			</td>
+		</tr>
+	</thead>
+    <tbody ng-repeat="feature in fruit.features">
+        <tr>
+        	<td>
+        		{{feature.name}}
+        	</td>
+        	<td>
+        		<div ng-if='feature.amount != undefined'>
+				    {{feature.amount}}
+				</div>
+				<div ng-if='feature.value != undefined'>
+				    <circle-rating ng-model="feature.value"></circle-rating>
+				</div>
+        		
+            </td>
+            <td>
+            	{{feature.description}}
+            </td>
+        </tr>
+    </tbody>
+    <tr>
+    	<td style="text-align:right;" colspan='3'>
+			{{totalCount}} items 
+			${{totalCost}}
+		</td>
+	</tr>
+</table>
+
+<button type="button" class="btn btn-success" ng-click="addToCart()">Add to cart</button>
+<button type="button" class="btn btn-danger" ng-click="removeFromCart()">Remove from cart</button>
+<button type="button" class="btn btn-default" ng-click="redirectToStore()">Back to store</button>
